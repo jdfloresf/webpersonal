@@ -1,0 +1,11 @@
+Scripts/
+Lib/
+Include/
+img/
+env/
+
+*.cfg
+*.log
+*.jpg
+*.cfg
+__pycache__/
