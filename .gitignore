@@ -9,3 +9,4 @@ env/
 *.jpg
 *.cfg
 __pycache__/
+*.sqlite3
