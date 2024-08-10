@@ -7,7 +7,7 @@ load_dotenv()
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'web-production-b610.up.railway.app']
+ALLOWED_HOSTS = ['localhost', 'web-production-b610.up.railway.app', 'jonathan-flores.up.railway.app']
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
