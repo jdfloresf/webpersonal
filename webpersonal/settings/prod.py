@@ -27,6 +27,8 @@ STATIC_ROOT = BASE_DIR /  'staticfiles'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://web-production-b610.up.railway.app/']
+
 #Media file
 
 MEDIA_URL = '/media/'
