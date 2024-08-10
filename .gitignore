@@ -2,7 +2,6 @@ Scripts/
 Lib/
 Include/
 img/
-env/
 staticfiles/
 
 *.cfg
@@ -11,3 +10,4 @@ staticfiles/
 *.cfg
 __pycache__/
 *.env
+db.sqlite3
