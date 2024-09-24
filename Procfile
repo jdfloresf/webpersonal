@@ -1,2 +1,1 @@
-release: python manage.py collectstatic --noinput
-web: gunicorn webpersonal.wsgi
+web: python manage.py collectstatic && gunicorn webpersonal.wsgi
