@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ proyecto.title }}{% endblock %}
+
+{% block background %}https://res.cloudinary.com/dqa2kd0vc/image/upload/v1723225520/portfolio-bg_zlc7nq.jpg{% endblock %}
+
+{% block headers %}
+<h1>{{ proyecto.title }}</h1>
+<span class="subheading">Detalles del Proyecto</span>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <img class="img-fluid" src="{{ proyecto.image.url }}" alt="{{ proyecto.title }}">
+        <p>{{ proyecto.descrption }}</p>
+        <p>Fecha de creación: {{ proyecto.created }}</p>
+        <p>Última actualización: {{ proyecto.updated }}</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,5 +1,8 @@
 from pathlib import Path
 from django.conf import settings
+from cloudinary_storage.storage import MediaCloudinaryStorage
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -21,7 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'core',
-    'portfolio.apps.PortfolioConfig'
+    'portfolio.apps.PortfolioConfig',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -90,3 +94,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

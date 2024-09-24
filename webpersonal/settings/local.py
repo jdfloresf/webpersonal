@@ -1,4 +1,10 @@
 from .base import *
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -17,6 +23,20 @@ DATABASES = {
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
+
+# Configurar Cloudinary
+
+CLOUD_NAME = os.getenv('CLOUD_NAME')
+API_KEY = os.getenv('API_KEY')
+API_SECRET = os.getenv('API_SECRET')
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'tu_cloud_name',
+    'API_KEY': 'tu_api_key',
+    'API_SECRET': 'tu_api_secret',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 STATIC_URL = 'static/'
 
