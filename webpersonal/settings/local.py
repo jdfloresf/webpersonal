@@ -31,9 +31,9 @@ API_KEY = os.getenv('API_KEY')
 API_SECRET = os.getenv('API_SECRET')
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'tu_cloud_name',
-    'API_KEY': 'tu_api_key',
-    'API_SECRET': 'tu_api_secret',
+    'CLOUD_NAME': 'CLOUD_NAME',
+    'API_KEY': 'API_KEY',
+    'API_SECRET': 'API_SECRET',
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
