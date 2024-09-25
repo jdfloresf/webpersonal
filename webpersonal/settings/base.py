@@ -1,6 +1,5 @@
 from pathlib import Path
 from django.conf import settings
-from cloudinary_storage.storage import MediaCloudinaryStorage
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +24,6 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'core',
     'portfolio.apps.PortfolioConfig',
-    'cloudinary'
 ]
 
 MIDDLEWARE = [
