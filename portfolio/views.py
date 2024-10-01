@@ -7,7 +7,7 @@ from django.views.generic import ListView, DetailView
 
 class ProjectListView(ListView):
     model = Project
-    template_name = "core/templates/core/portfolio.html"
+    template_name = "core/templates/core/portfolio_list.html"
     context_object_name = 'proyectos'
     ordering = ['-created']
 
