@@ -9,7 +9,7 @@ app_name = 'portfolio_app'
 
 class ProjectListView(ListView):
     model = Project
-    template_name = "core/templates/portfolio/portfolio_list.html"
+    template_name = "core/templates/portfolio/project_list.html"
     context_object_name = 'proyectos'
     ordering = ['-created']
 
