@@ -5,15 +5,17 @@ from django.views.generic import ListView, DetailView
 
 # Create your views here.
 
+app_name = 'portfolio_app'
+
 class ProjectListView(ListView):
     model = Project
-    template_name = "core/templates/core/portfolio_list.html"
+    template_name = "core/templates/portfolio/portfolio_list.html"
     context_object_name = 'proyectos'
     ordering = ['-created']
 
 
 class ProjectDetailView(DetailView):
     model = Project
-    template_name = "core/templates/core/project_detail.html"
+    template_name = "core/templates/portfolio/project_detail.html"
     context_object_name = 'proyecto'
 
