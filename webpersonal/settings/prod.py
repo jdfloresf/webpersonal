@@ -13,7 +13,7 @@ ALLOWED_HOSTS = ['localhost', 'web-production-b610.up.railway.app', 'jonathan-fl
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': config(default=os.getenv("DATABASE_URL"))
+    'default': config(default=os.getenv("DATABASE_PUBLIC_URL"))
 }
 
 # Static files (CSS, JavaScript, Images)
@@ -29,7 +29,7 @@ STATIC_ROOT = BASE_DIR /  'staticfiles'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CSRF_TRUSTED_ORIGINS = ['http://*', 'https://web-production-b610.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://web-production-b610.up.railway.app', 'https://jonathan-flores.up.railway.app/']
 
 #Media file
 
