@@ -25,7 +25,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('about-me/', views.about, name="about"),
     path('contact/', views.contact, name="contact"),
-    path('', include('portfolio.urls')),
+    path('portfolio/', include('portfolio.urls')),
 ]
 
 if settings.DEBUG:
