@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404
 
 # Create your views here.
 def home(request):
@@ -13,3 +13,5 @@ def portfolio(request):
 def contact(request):
     return render(request, "core/contact.html")
     
+def project_detail(request):
+    return render(request, "core/project_detail.hmtl")
