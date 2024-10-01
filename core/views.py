@@ -1,17 +1,17 @@
-from django.shortcuts import render, HttpResponse, get_object_or_404
+from django.views.generic import TemplateView
 
 # Create your views here.
-def home(request):
-    return render(request, "core/home.html")
 
-def about(request):
-    return render(request, "core/about.html")
+class HomeView(TemplateView):
+    template_name = "core/home.html"
 
-def portfolio(request):
-    return render(request, "core/portfolio.html")
+class AboutView(TemplateView):
+    template_name = "core/about.html"
 
-def contact(request):
-    return render(request, "core/contact.html")
+class ContactView(TemplateView):
+    template_name = "core/contact.html"
+
+
     
 # def project_detail(request):
 #     return render(request, "core/project_detail.hmtl")
