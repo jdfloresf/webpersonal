@@ -3,6 +3,7 @@ Lib/
 Include/
 img/
 staticfiles/
+media/
 
 *.cfg
 *.log
