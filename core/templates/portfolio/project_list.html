@@ -12,8 +12,14 @@
 {%block content %}
 <!-- Proyecto -->
 <div class="row project">  	
-	<div class="col-lg-3 col-md-4 offset-lg-1">	      
-		<img class="img-fluid" src="https://res.cloudinary.com/dqa2kd0vc/image/upload/v1723225518/home-bg_pkp3ar.jpg" alt="">
+	<div class="col-lg-3 col-md-4 offset-lg-1">
+		
+		{% for photo in photos %}
+			{% load cloudinary %}
+			{% cloudinary photo.image %}
+		{% endfor %}
+				      
+		<!-- <img class="img-fluid" src="https://res.cloudinary.com/dqa2kd0vc/image/upload/v1723225518/home-bg_pkp3ar.jpg" alt=""> -->
 	</div>
 	
 	{% for proyecto in proyectos %}

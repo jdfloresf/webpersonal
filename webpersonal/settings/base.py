@@ -22,10 +22,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
+    'cloudinary_storage',
+    'cloudinary',
     'core',
     'portfolio.apps.PortfolioConfig',
-    'cloudinary',
-    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
