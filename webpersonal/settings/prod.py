@@ -37,9 +37,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 # Configurar Cloudinary
 CLOUDINARY_STORAGE = {
-    'cloud_name': os.getenv('CLOUD_NAME'),
-    'api_key': os.getenv('API_KEY'),
-    'api_secret': os.getenv('API_SECRET'),
+    'api_key': os.getenv('api_key'),
+    'api_secret': os.getenv('api_secret'),
+    'cloud_name': os.getenv('cloud_name'),
 }
 
 # Configurar almacenamiento predeterminado en Cloudinary
