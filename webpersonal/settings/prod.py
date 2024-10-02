@@ -31,7 +31,16 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CSRF_TRUSTED_ORIGINS = ['http://*', 'https://jonathan-flores.up.railway.app']
 
-#Media file
-
+# Media file
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_ROOT = BASE_DIR / 'media'
+
+# Configurar Cloudinary
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUD_NAME'),
+    'API_KEY': os.getenv('API_KEY'),
+    'API_SECRET': os.getenv('API_SECRET'),
+}
+
+# Configurar almacenamiento predeterminado en Cloudinary
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

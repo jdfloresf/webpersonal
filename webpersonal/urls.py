@@ -27,4 +27,8 @@ urlpatterns = [
     path('about-me/', views.about, name="about"),
     path('contact/', views.contact, name="contact"),
     path('portfolio/', include('portfolio.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+# Solo añadimos esto en modo de desarrollo
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
