@@ -1,10 +1,9 @@
 from django.db import models
-from cloudinary.models import CloudinaryField
 
 class Project(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo")
     descrption = models.TextField(verbose_name="Descripción")
-    image = CloudinaryField('image')
+    image = models.ImageField('Imagen', blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated =   models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
