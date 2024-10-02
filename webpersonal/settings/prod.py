@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'web-production-b610.up.railway.app', 'jonathan-flores.up.railway.app', 'jdfloresf.asdrome.com/']
+ALLOWED_HOSTS = ['localhost', 'web-production-b610.up.railway.app', 'jonathan-flores.up.railway.app', 'jdfloresf.asdrome.com/', 'http://127.0.0.1:8000/']
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
