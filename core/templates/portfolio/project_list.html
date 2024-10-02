@@ -12,22 +12,17 @@
 {%block content %}
 <!-- Proyecto -->
 <div class="row project">  	
-	<div class="col-lg-3 col-md-4 offset-lg-1">	      <img class="img-fluid" src="https://res.cloudinary.com/dqa2kd0vc/image/upload/v1723225522/about-bg_twbpdz.jpg" alt="">
+	<div class="col-lg-3 col-md-4 offset-lg-1">	      
+		<img class="img-fluid" src="https://res.cloudinary.com/dqa2kd0vc/image/upload/v1723225518/home-bg_pkp3ar.jpg" alt="">
 	</div>
-  <div class="col-lg-7 col-md-8">
-		<h2 class="section-heading title">Segundo proyecto</h2>   
-    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm....</p>
-    <p><a href="{% url 'portfolio_app:portfolio_detail' %}">Más información</a></p>
-	</div>
-</div>
-<!-- Proyecto -->
-<div class="row project">  	
-	<div class="col-lg-3 col-md-4 offset-lg-1">	      <img class="img-fluid" src="https://res.cloudinary.com/dqa2kd0vc/image/upload/v1723225518/home-bg_pkp3ar.jpg" alt="">
-	</div>
-  <div class="col-lg-7 col-md-8">
-		<h2 class="section-heading title">Primer proyecto</h2>   
-    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm....</p>
-    <p><a href="{% url 'portfolio_app:portfolio_detail' %}">Más información</a></p>
-	</div>
+	
+	{% for proyecto in proyectos %}
+		<div class="col-lg-7 col-md-8">
+			<h2 class="section-heading title">{{ proyecto.title }}</h2>   
+    		<p>{{ proyecto.descrption }}</p>
+    		<p><a href="{% url 'portfolio_app:portfolio_detail' proyecto.id %}">Más información</a></p>
+		</div>
+	{% endfor %}
+		
 </div>
 {% endblock %}
