@@ -6,5 +6,5 @@ app_name = 'portfolio_app'
 
 urlpatterns = [
     path('', ProjectListView.as_view(), name='portfolio'),
-    path('project-detail/<slug>/', ProjectDetailView.as_view(), name='portfolio_detail')
+    path('blog-detail/<slug>/', ProjectDetailView.as_view(), name='blog_detail')
 ]

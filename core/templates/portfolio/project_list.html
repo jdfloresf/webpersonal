@@ -1,26 +1,26 @@
 {% extends 'core/base.html' %}
 
-{%block title %}Portafolio{% endblock %}
+{%block title %}Blog{% endblock %}
 
 {% block background %}https://res.cloudinary.com/dqa2kd0vc/image/upload/v1723225520/portfolio-bg_zlc7nq.jpg{% endblock %}
 
 {% block headers %}
-<h1>Portafolio</h1>
-<span class="subheading">Currículo</span>
+<h1>Blog</h1>
+<span class="subheading">Entradas</span>
 {% endblock %}
 
 {%block content %}
 <!-- Proyecto -->
 <div class="row project">  	
 	{% for proyecto in proyectos %}
-		<div class="col-lg-3 col-md-4 offset-lg-1">
+		<div class="col-lg-3 col-md-4 offset-lg-1 mb-4">
 			<img class="img-fluid" src="{{ proyecto.image.url }}" alt="">
 		</div>
 	
 		<div class="col-lg-7 col-md-8">
 			<h2 class="section-heading title">{{ proyecto.title }}</h2>   
     		<p>{{ proyecto.descrption | truncatechars:100 }}</p>
-    		<p><a href="{% url 'portfolio_app:portfolio_detail' proyecto.slug %}">Más información</a></p>
+    		<p><a href="{% url 'portfolio_app:blog_detail' proyecto.slug %}">Más información</a></p>
 		</div>
 	{% endfor %}
 		
