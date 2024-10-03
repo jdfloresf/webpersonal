@@ -1,3 +1,7 @@
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 from .base import *
 from dj_database_url import config
 import os
@@ -40,11 +44,17 @@ api_key = os.getenv('api_key')
 api_secret = os.getenv('api_secret')
 cloud_name = os.getenv('cloud_name')
 
-CLOUDINARY_STORAGE = {
-    'api_key': api_key,
-    'api_secret': api_secret,
-    'cloud_name': cloud_name,
-}
+# CLOUDINARY_STORAGE = {
+#     'api_key': api_key,
+#     'api_secret': api_secret,
+#     'cloud_name': cloud_name,
+# }
+
+cloudinary.config( 
+  	cloud_name = cloud_name,
+  	api_key = api_key,
+  	api_secret = api_secret
+)
 
 # Configurar almacenamiento predeterminado en Cloudinary
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

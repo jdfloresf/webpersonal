@@ -1,5 +1,7 @@
 from pathlib import Path
 from django.conf import settings
+import cloudinary
+import cloudinary_storage
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
