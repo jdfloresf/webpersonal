@@ -19,8 +19,8 @@
 	
 		<div class="col-lg-7 col-md-8">
 			<h2 class="section-heading title">{{ proyecto.title }}</h2>   
-    		<p>{{ proyecto.descrption }}</p>
-    		<p><a href="{% url 'portfolio_app:portfolio_detail' proyecto.id %}">Más información</a></p>
+    		<p>{{ proyecto.descrption | truncatechars:100 }}</p>
+    		<p><a href="{% url 'portfolio_app:portfolio_detail' proyecto.slug %}">Más información</a></p>
 		</div>
 	{% endfor %}
 		
