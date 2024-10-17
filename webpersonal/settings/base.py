@@ -1,7 +1,3 @@
-import os
-
-from dotenv import load_dotenv
-
 from pathlib import Path
 from django.conf import settings
 import cloudinary
@@ -16,8 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-load_dotenv()
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-%w(1yz7fob)a)z+cse!r+9n7)f0#(r4r7%@#a9l)xj*-h9$^s)'
 
 # Application definition
 
