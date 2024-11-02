@@ -56,5 +56,23 @@ cloudinary.config(
   	api_secret = api_secret
 )
 
+# Configuración CKEditor
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline',],
+            ['NumberedList', 'BulletedList', '-' 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['TextColor', 'Format', 'FontSize', 'Link'],
+            ['Smiley', 'Image', 'Iframe',],
+            ['RemoveFromat', 'Source'],
+        ],
+        'stylesSet': [
+
+        ],
+    }
+}
+
 # Configurar almacenamiento predeterminado en Cloudinary
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
