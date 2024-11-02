@@ -2,7 +2,7 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 from cloudinary.models import CloudinaryField
-from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextUploadingField
 
 class Project(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo")
