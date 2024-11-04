@@ -62,17 +62,12 @@ CKEDITOR_IMAGE_BACKEND = 'pillow/'
 TOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline',],
-            ['NumberedList', 'BulletedList', '-' 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['TextColor', 'Format', 'FontSize', 'Link'],
-            ['Smiley', 'Image', 'Iframe',],
-            ['RemoveFromat', 'Source'],
-        ],
-        'stylesSet': [
-
-        ],
+        'toolbar': 'full',
+        'extraPlugins': ','.join(
+            [
+                'codesnippet'
+            ]
+        )
     }
 }
 
