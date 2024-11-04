@@ -65,7 +65,7 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
         'extraPlugins': ','.join(
             [
-                'codesnippet'
+                'codesnippet',
             ]
         )
     }
